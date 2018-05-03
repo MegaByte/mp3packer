@@ -330,11 +330,11 @@ static unsigned int get_bits_slow(seq_string_t *s, int num_bits) {
 }
 
 static unsigned int get_bits_wordwise(seq_string_t *s, int num_bits) {
-	uint32 raw;
+	uint32_t raw;
 
 #if defined(__WIN32__) && !defined __CYGWIN__
-	uint32 *int_ptr;
-	int_ptr = (uint32 *)s->byte_ptr;
+	uint32_t *int_ptr;
+	int_ptr = (uint32_t *)s->byte_ptr;
 	raw = _byteswap_ulong(*int_ptr) << s->bit_index;
 #else
 	raw = (
