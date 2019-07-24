@@ -29,7 +29,7 @@ open Types;;
 
 let version = "2.04-268";;
 
-let padding = Printf.sprintf "mp3packer%s\n" version;;
+let padding = "\000";;
 
 let features_ref = ref [];;
 if Sys.word_size > 32 then features_ref := Printf.sprintf "%d-bit" Sys.word_size :: !features_ref;;
